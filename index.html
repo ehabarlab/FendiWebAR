@@ -99,14 +99,17 @@
     WEBARSDK.InitUnityWebGL(canvas.id, cameraObjectName, stageObjectName, canvas.clientWidth, canvas.clientHeight);
     function BlackBtnClick() {
      console.log("Black Bag");
+     UNITYINSTANCE.SendMessage('FendiExperienceManager', 'SelectBag', 0);
     }
 
     function NudeBtnClick() {
      console.log("Nude Bag");
+      UNITYINSTANCE.SendMessage('FendiExperienceManager', 'SelectBag', 1);
     }
 
     function WhiteBtnClick() {
      console.log("White Bag");
+      UNITYINSTANCE.SendMessage('FendiExperienceManager', 'SelectBag', 2);
     }
   </script>
   <a id="BlackBag" href="#" onclick="BlackBtnClick()"
